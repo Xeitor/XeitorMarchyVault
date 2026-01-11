@@ -13,6 +13,33 @@ ln -s ~/XeitorMarchyVault/hypr ~/.config/hypr
 ln -s ~/XeitorMarchyVault/starship.toml ~/.config/starship.toml
 ```
 
+## Reload configs (omarchy)
+
+After editing config files, reload them:
+
+```bash
+# Hyprland
+omarchy-refresh-hyprland
+
+# Hypridle
+omarchy-refresh-hypridle
+
+# Hyprlock
+omarchy-refresh-hyprlock
+
+# Hyprsunset
+omarchy-refresh-hyprsunset
+
+# Apply theme changes
+omarchy-theme-set <theme-name>
+
+# List available themes
+omarchy-theme-list
+
+# Run custom hooks (from ~/.config/omarchy/hooks/)
+omarchy-hook <hook-name>
+```
+
 ## Contents
 
 - `hypr/` - Hyprland configuration
