@@ -1,17 +1,26 @@
 # XeitorMarchyVault
 
-Personal dotfiles for Hyprland and Starship.
+Personal dotfiles for Hyprland and Starship, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Setup on a new machine
 
 ```bash
+# Install stow
+sudo pacman -S stow
+
 # Clone the repo
 git clone https://github.com/Xeitor/XeitorMarchyVault ~/XeitorMarchyVault
 
-# Create symlinks
-ln -s ~/XeitorMarchyVault/hypr ~/.config/hypr
-ln -s ~/XeitorMarchyVault/starship.toml ~/.config/starship.toml
-ln -s ~/XeitorMarchyVault/omarchy-themed ~/.config/omarchy/themed
+# Stow all packages
+cd ~/XeitorMarchyVault
+stow hypr starship omarchy bin
+```
+
+## Uninstall
+
+```bash
+cd ~/XeitorMarchyVault
+stow -D hypr starship omarchy bin
 ```
 
 ## Reload configs (omarchy)
@@ -20,7 +29,7 @@ After editing config files, reload them:
 
 ```bash
 # Reload everything at once
-~/XeitorMarchyVault/scripts/reload-all
+reload-all
 
 # Or individually:
 
@@ -46,10 +55,17 @@ omarchy-theme-list
 omarchy-hook <hook-name>
 ```
 
-## Contents
+## Packages
 
-- `hypr/` - Hyprland configuration
-- `starship.toml` - Starship prompt configuration
-- `omarchy-themed/` - Omarchy themed templates
-- `scripts/` - Utility scripts (reload-all, etc.)
-- `docs/` - Documentation notes
+| Package | Contents | Target |
+|---------|----------|--------|
+| `hypr` | Hyprland configuration | `~/.config/hypr/` |
+| `starship` | Starship prompt config | `~/.config/starship.toml` |
+| `omarchy` | Theme templates | `~/.config/omarchy/themed/` |
+| `bin` | Utility scripts | `~/.local/bin/` |
+
+## Documentation
+
+See `docs/` for additional notes:
+- `docs/stow.md` - How GNU Stow works
+- `docs/omarchys/themes.md` - Omarchy theming system

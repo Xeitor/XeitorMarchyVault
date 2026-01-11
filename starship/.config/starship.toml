@@ -1,0 +1,59 @@
+# Starship prompt config - themed by omarchy
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[░▒▓](#d3c6aa)\
+[ ⮝ ](bg:#d3c6aa fg:#2d353b)\
+[](bg:#7fbbb3 fg:#d3c6aa)\
+$directory\
+[](fg:#7fbbb3 bg:#475258)\
+$git_branch\
+$git_status\
+[](fg:#475258 bg:#475258)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[ ](fg:#475258)\
+$character"""
+
+[directory]
+style = "fg:#d3c6aa bg:#7fbbb3"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#475258"
+format = '[[ $symbol $branch ](fg:#7fbbb3 bg:#475258)]($style)'
+
+[git_status]
+style = "bg:#475258"
+format = '[[($all_status$ahead_behind )](fg:#7fbbb3 bg:#475258)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#475258"
+format = '[[ $symbol ($version) ](fg:#7fbbb3 bg:#475258)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#475258"
+format = '[[ $symbol ($version) ](fg:#7fbbb3 bg:#475258)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#475258"
+format = '[[ $symbol ($version) ](fg:#7fbbb3 bg:#475258)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#475258"
+format = '[[ $symbol ($version) ](fg:#7fbbb3 bg:#475258)]($style)'
