@@ -11,6 +11,7 @@ git clone https://github.com/Xeitor/XeitorMarchyVault ~/XeitorMarchyVault
 # Create symlinks
 ln -s ~/XeitorMarchyVault/hypr ~/.config/hypr
 ln -s ~/XeitorMarchyVault/starship.toml ~/.config/starship.toml
+ln -s ~/XeitorMarchyVault/omarchy-themed ~/.config/omarchy/themed
 ```
 
 ## Reload configs (omarchy)
@@ -49,5 +50,6 @@ omarchy-hook <hook-name>
 
 - `hypr/` - Hyprland configuration
 - `starship.toml` - Starship prompt configuration
+- `omarchy-themed/` - Omarchy themed templates
 - `scripts/` - Utility scripts (reload-all, etc.)
 - `docs/` - Documentation notes
