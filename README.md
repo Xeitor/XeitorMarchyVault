@@ -18,6 +18,11 @@ ln -s ~/XeitorMarchyVault/starship.toml ~/.config/starship.toml
 After editing config files, reload them:
 
 ```bash
+# Reload everything at once
+~/XeitorMarchyVault/scripts/reload-all
+
+# Or individually:
+
 # Hyprland
 omarchy-refresh-hyprland
 
@@ -44,4 +49,5 @@ omarchy-hook <hook-name>
 
 - `hypr/` - Hyprland configuration
 - `starship.toml` - Starship prompt configuration
+- `scripts/` - Utility scripts (reload-all, etc.)
 - `docs/` - Documentation notes
