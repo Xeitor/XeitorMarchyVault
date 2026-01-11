@@ -1,16 +1,13 @@
 #!/bin/bash
-# Reload all Hyprland and omarchy configs
+# Reload all Hyprland configs
 
 echo "Reloading Hyprland..."
-omarchy-refresh-hyprland
+hyprctl reload
 
-echo "Reloading Hypridle..."
-omarchy-refresh-hypridle
+echo "Restarting Hypridle..."
+pkill hypridle; hypridle &
 
-echo "Reloading Hyprlock..."
-omarchy-refresh-hyprlock
-
-echo "Reloading Hyprsunset..."
-omarchy-refresh-hyprsunset
+echo "Restarting Hyprsunset..."
+pkill hyprsunset; hyprsunset &
 
 echo "Done!"
