@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+    "discord"
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "xeitor";
@@ -18,6 +21,8 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.discord
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
