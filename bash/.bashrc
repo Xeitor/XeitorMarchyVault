@@ -15,3 +15,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Home Manager session variables
 . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
+# chruby
+source /usr/local/share/chruby/chruby.sh
+source ~/.autoenv/activate.sh
