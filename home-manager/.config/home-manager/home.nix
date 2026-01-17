@@ -23,6 +23,7 @@
   home.packages = [
     pkgs.discord
     pkgs.pgadmin4
+    pkgs.zellij
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

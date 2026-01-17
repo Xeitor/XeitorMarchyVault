@@ -19,3 +19,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source ~/.autoenv/activate.sh
+
+# Zellij sessionizer (Ctrl+f)
+bind -x '"\C-f": zellij_sessionizer'
