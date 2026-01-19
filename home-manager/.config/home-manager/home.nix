@@ -3,6 +3,7 @@
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
     "discord"
+    "android-studio-stable"
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -24,6 +25,7 @@
     pkgs.discord
     pkgs.pgadmin4
     pkgs.zellij
+    pkgs.android-studio
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
