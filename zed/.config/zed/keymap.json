@@ -7,15 +7,39 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-    },
+      "space g g": ["task::Spawn", { "task_name": "LazyGit" }]
+    }
   },
   {
-    "context": "Editor && vim_mode == insert",
+    "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      // "j k": "vim::NormalBefore"
-    },
+      // "j k": "vim::SwitchToNormalMode"
+    }
   },
+  {
+    "context": "vim_mode == helix_select",
+    "bindings": {
+      "alt-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "alt-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "alt-h": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-g ctrl-b": "editor::ToggleFocus"
+    }
+  }
 ]
