@@ -32,10 +32,10 @@ session_name=$(basename "$selected" | tr . _)
 if [[ -z $ZELLIJ ]]; then
 	cd $selected
 
+	# Reset TTY settings that fzf may have modified
+	stty sane
 	# -c will make zellij to either create a new session or to attach into an existing one
-	printf "opening zellij session"
-	zellij attach $session_name -c
-	exit 0
+	exec zellij attach $session_name -c
 fi
 
 # We're inside zellij so we'll open a new pane and move into the selected directory
