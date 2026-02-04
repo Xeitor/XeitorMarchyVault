@@ -45,3 +45,8 @@ stow -D hypr starship omarchy bin
 | `hypr` | Hyprland configuration | `~/.config/hypr/` |
 | `starship` | Starship prompt config | `~/.config/starship.toml` |
 | `omarchy` | Theme templates | `~/.config/omarchy/themed/` |
+
+
+
+## Disable ipv6
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
