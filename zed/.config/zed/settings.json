@@ -53,7 +53,7 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Mirage",
-    "dark": "One Dark",
+    "dark": "Gruvbox Dark Soft",
   },
   "lsp": {
     "rubocop": {
